@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>GSAP FLIP image grid modal</title>
+</head>
+
+<body>
+    <section class="space"></section>
+
+    <section>
+        <!--  silly toggle button (should probably be a radio) -->
+        <button>
+            <div class="radio">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <div class="button-icons">
+                <div class="inline">
+                    <div class="dot-icon"></div>
+                    <div class="dot-icon"></div>
+                    <div class="dot-icon"></div>
+                    <div class="dot-icon"></div>
+                </div>
+                <div class="grid">
+                    <div class="dot-icon"></div>
+                    <div class="dot-icon"></div>
+                    <div class="dot-icon"></div>
+                    <div class="dot-icon"></div>
+                </div>
+            </div>
+            toggle view
+        </button>
+
+        <div class="grid-wrapper stack">
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?0">
+                    <img src="https://source.unsplash.com/random/800x800/?0" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?1">
+                    <img src="https://source.unsplash.com/random/800x800/?1" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?2">
+                    <img src="https://source.unsplash.com/random/800x800/?2" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?3">
+                    <img src="https://source.unsplash.com/random/800x800/?3" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?4">
+                    <img src="https://source.unsplash.com/random/800x800/?4" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?5">
+                    <img src="https://source.unsplash.com/random/800x800/?5" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?6">
+                    <img src="https://source.unsplash.com/random/800x800/?6" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?7">
+                    <img src="https://source.unsplash.com/random/800x800/?7" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?8">
+                    <img src="https://source.unsplash.com/random/800x800/?8" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?9">
+                    <img src="https://source.unsplash.com/random/800x800/?9" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?10">
+                    <img src="https://source.unsplash.com/random/800x800/?10" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?11">
+                    <img src="https://source.unsplash.com/random/800x800/?11" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?12">
+                    <img src="https://source.unsplash.com/random/800x800/?12" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?13">
+                    <img src="https://source.unsplash.com/random/800x800/?13" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?14">
+                    <img src="https://source.unsplash.com/random/800x800/?14" />
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <div class="item" data-url="https://source.unsplash.com/random/800x800/?15">
+                    <img src="https://source.unsplash.com/random/800x800/?15" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="space"></section>
+
+    <!-- modal view -->
+    <div class="modal">
+        <div data-flip-id="img" class="modal-image"><img src="" /></div>
+    </div>
+</body>
+
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+<script src="script.js"></script>
