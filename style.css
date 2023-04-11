@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.space {
+    height: 10vh;
+}
+
+section {
+    position: relative;
+}
+
+button {
+    position: absolute;
+    top: -60px;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    height: 2rem;
+    width: 4rem;
+    font-size: 0;
+    border-radius: 4rem;
+    background: #aaa;
+    box-shadow: inset 0 2px 6px 2px rgba(0, 0, 0, 0.27);
+}
+
+button .radio {
+    background: #fff;
+    border-radius: 3rem;
+    transition: transform 0.5s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.44);
+    z-index: 2;
+}
+
+button .radio,
+button .inline,
+button .grid {
+    content: "";
+    position: absolute;
+    height: 2.2rem;
+    width: 2.2rem;
+    top: -0.1rem;
+    left: -0.1rem;
+}
+
+button .radio .dot,
+button .inline .dot,
+button .grid .dot {
+    background: #666;
+}
+
+button .radio .dot-icon,
+button .inline .dot-icon,
+button .grid .dot-icon {
+    background: #efefef;
+}
+
+button .radio .dot,
+button .radio .dot-icon,
+button .inline .dot,
+button .inline .dot-icon,
+button .grid .dot,
+button .grid .dot-icon {
+    height: 5px;
+    width: 5px;
+    border-radius: 3px;
+    display: inline-block;
+    transition: transform 0.4s ease;
+    margin: calc(50% - 2.5px) -0.5px 0;
+}
+
+button .grid {
+    transform: translatex(90%);
+}
+
+button .grid .dot-icon:first-child {
+    transform: translatey(-60%) translatex(60%);
+}
+
+button .grid .dot-icon:nth-child(2) {
+    transform: translatey(60%) translatex(-20%);
+}
+
+button .grid .dot-icon:nth-child(3) {
+    transform: translatey(60%) translatex(20%);
+}
+
+button .grid .dot-icon:last-child {
+    transform: translatey(-60%) translatex(-60%);
+}
+
+button .button-icons {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+button.grid-view-on .radio {
+    transform: translatex(90%);
+}
+
+button.grid-view-on .radio .dot:first-child {
+    transform: translatey(-60%) translatex(60%);
+}
+
+button.grid-view-on .radio .dot:nth-child(2) {
+    transform: translatey(-60%) translatex(100%);
+}
+
+button.grid-view-on .radio .dot:nth-child(3) {
+    transform: translatey(60%) translatex(-100%);
+}
+
+button.grid-view-on .radio .dot:last-child {
+    transform: translatey(60%) translatex(-60%);
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 720px;
+    margin-inline: auto;
+    grid-gap: 1rem;
+}
+
+.grid-wrapper.stack {
+    display: block;
+    max-width: 720px;
+}
+
+.grid-wrapper.stack .item-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 12.5%;
+    margin-right: -7.333%;
+    z-index: 1;
+    border-radius: 100%;
+}
+
+.grid-wrapper.stack .item-wrapper .item {
+    margin: 0;
+    transition: box-shadow 0.2s ease;
+}
+
+.grid-wrapper.stack .item-wrapper .item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+.grid-wrapper .item {
+    aspect-ratio: 1/1;
+    background: #aaa;
+    box-sizing: content-box;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.grid-wrapper .item.active-thumb {
+    z-index: 2;
+    transition: none !important;
+}
+
+.grid-wrapper .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.modal {
+    cursor: zoom-out;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-backdrop-filter: blur(0) grayscale(0);
+    backdrop-filter: blur(0) grayscale(0);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.modal.active {
+    display: grid;
+    opacity: 1;
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.69);
+    -webkit-backdrop-filter: blur(5px) grayscale(100%);
+    backdrop-filter: blur(5px) grayscale(100%);
+    transition: background-color 0.2s ease-in, -webkit-backdrop-filter 0.2s ease;
+    transition: background-color 0.2s ease-in, backdrop-filter 0.2s ease;
+    transition: background-color 0.2s ease-in, backdrop-filter 0.2s ease, -webkit-backdrop-filter 0.2s ease;
+}
+
+.modal .modal-image {
+    aspect-ratio: 16/9;
+    width: 90%;
+    max-width: 1260px;
+    background: #eee;
+    margin: 40px auto;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+}
+
+.modal .modal-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
